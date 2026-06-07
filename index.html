@@ -129,7 +129,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1fr;
       gap: 34px;
       align-items: center;
     }
@@ -356,30 +356,6 @@
       background: #eff6ff;
     }
 
-    .service-card .icon-box,
-    .phone-item .icon-wrap {
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
-      background: linear-gradient(135deg, #ffffff, #f8fafc);
-    }
-
-    .service-card .icon-box img,
-    .phone-item .icon-img {
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .phone-item .icon-wrap {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 8px;
-    }
-
     .category-card h3,
     .service-card h3 {
       color: var(--dark);
@@ -425,7 +401,7 @@
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
 
@@ -594,13 +570,128 @@
         border-radius: 24px;
       }
     }
+  
+    .service-bundle {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: 0 14px 34px rgba(16, 24, 40, 0.06);
+      transition: 0.2s ease;
+    }
+
+    .service-bundle:hover {
+      transform: translateY(-6px);
+      border-color: rgba(37, 99, 235, 0.28);
+    }
+
+    .bundle-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eef2f7;
+    }
+
+    .bundle-head h3 {
+      color: var(--dark);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .bundle-head span {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 900;
+      background: #eff6ff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .bundle-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .mini-service {
+      border: 1px solid #e9edf5;
+      border-radius: 20px;
+      padding: 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+    }
+
+    .mini-service h4 {
+      color: var(--dark);
+      font-size: 15px;
+      margin: 0 0 6px;
+      line-height: 1.4;
+    }
+
+    .mini-service p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0 0 10px;
+    }
+
+    .mini-service .price {
+      margin-top: auto;
+      padding-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: var(--dark);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .mini-service .order-btn {
+      margin-top: 10px;
+      width: 100%;
+      background: #25d366;
+      color: #052e16;
+      border: 0;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-weight: 900;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    @media (max-width: 580px) {
+      .bundle-items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mini-service {
+        min-height: 205px;
+        padding: 12px;
+      }
+
+      .mini-service h4 {
+        font-size: 14px;
+      }
+
+      .mini-service p {
+        font-size: 12px;
+      }
+    }
+
   </style>
 </head>
 <body>
   <div class="top-bar">
     <div class="container">
       <span>⚡ خدمات رقمية سريعة وآمنة حسب الطلب</span>
-      <span>📞 للتواصل: غيّر رقم الواتساب من داخل الكود</span>
+      <span>📞 واتساب الطلبات: 37929637</span>
     </div>
   </div>
 
@@ -637,24 +728,6 @@
           <div class="stat"><strong>+40</strong><span>خدمة رقمية</span></div>
           <div class="stat"><strong>24/7</strong><span>استقبال الطلبات</span></div>
           <div class="stat"><strong>سريع</strong><span>تنفيذ حسب الطلب</span></div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="phone-mockup">
-          <div class="phone-head">
-            <div>
-              <strong>الخدمات الأكثر طلباً</strong>
-              <p style="color:#667085;font-size:13px;line-height:1.4">اختر الخدمة واطلب مباشرة</p>
-            </div>
-            <div class="mini-logo">ر</div>
-          </div>
-          <div class="phone-grid">
-            <div class="phone-item"><span class="icon-wrap"><img class="icon-img" src="https://www.google.com/s2/favicons?sz=128&domain=chatgpt.com" alt="ChatGPT Plus"></span>ChatGPT Plus</div>
-            <div class="phone-item"><span class="icon-wrap"><img class="icon-img" src="https://www.google.com/s2/favicons?sz=128&domain=pubgmobile.com" alt="PUBG UC"></span>PUBG UC</div>
-            <div class="phone-item"><span class="icon-wrap"><img class="icon-img" src="https://www.google.com/s2/favicons?sz=128&domain=shopify.com" alt="متجر إلكتروني"></span>متجر إلكتروني</div>
-            <div class="phone-item"><span class="icon-wrap"><img class="icon-img" src="https://www.google.com/s2/favicons?sz=128&domain=canva.com" alt="تصميم إعلان"></span>تصميم إعلان</div>
-          </div>
         </div>
       </div>
     </div>
@@ -718,8 +791,8 @@
     <div class="container">
       <div class="section-title">
         <div class="eyebrow">الخدمات</div>
-        <h2>بطاقات خدمات جاهزة للطلب</h2>
-        <p>كل خدمة داخل بطاقة واضحة فيها الأيقونة، الاسم، وصف مختصر، السعر، وزر الطلب عبر واتساب.</p>
+        <h2>خدمات مرتبة داخل خانات</h2>
+        <p>كل خانة تحتوي على 4 منتجات أو خدمات، لتظهر بشكل جميل وواضح خاصة على الهاتف.</p>
       </div>
 
       <div class="tabs" aria-label="تصنيف الخدمات">
@@ -728,219 +801,47 @@
         <button class="tab-btn" data-filter="games">الألعاب</button>
         <button class="tab-btn" data-filter="tools">الأدوات</button>
         <button class="tab-btn" data-filter="stores">المتاجر</button>
-        <button class="tab-btn" data-filter="design">التصاميم</button>
       </div>
 
       <div class="service-grid">
-        <article class="service-card" id="apps" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=chatgpt.com" alt="ChatGPT Plus" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>ChatGPT Plus</h3>
-          <p>اشتراك شهري أو 3 أشهر حسب الطلب.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="ChatGPT Plus">اطلب عبر واتساب</button>
+        <article class="service-bundle" id="apps" data-category="apps">
+          <div class="bundle-head"><h3>شحن التطبيقات</h3><span>4 منتجات</span></div>
+          <div class="bundle-items">
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=chatgpt.com" alt="ChatGPT Plus" loading="lazy" referrerpolicy="no-referrer"></div><h4>ChatGPT Plus</h4><p>اشتراك شهري أو 3 أشهر حسب الطلب.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="ChatGPT Plus">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=canva.com" alt="Canva Pro" loading="lazy" referrerpolicy="no-referrer"></div><h4>Canva Pro</h4><p>اشتراك مناسب للتصميمات والبوستات.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="Canva Pro">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=capcut.com" alt="CapCut Pro" loading="lazy" referrerpolicy="no-referrer"></div><h4>CapCut Pro</h4><p>خدمة مناسبة للمونتاج وصناعة الفيديو.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="CapCut Pro">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=snapchat.com" alt="Snapchat Plus" loading="lazy" referrerpolicy="no-referrer"></div><h4>Snapchat Plus</h4><p>تفعيل الاشتراك حسب المدة المطلوبة.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="Snapchat Plus">اطلب عبر واتساب</button></div>
+          </div>
         </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=canva.com" alt="Canva Pro" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Canva Pro</h3>
-          <p>حساب أو اشتراك مناسب للتصاميم.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="Canva Pro">اطلب عبر واتساب</button>
+
+        <article class="service-bundle" data-category="games">
+          <div class="bundle-head"><h3>شحن الألعاب</h3><span>4 منتجات</span></div>
+          <div class="bundle-items">
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=pubgmobile.com" alt="PUBG UC" loading="lazy" referrerpolicy="no-referrer"></div><h4>PUBG UC</h4><p>شحن شدات ببجي حسب الكمية.</p><div class="price"><span>السعر</span><span>حسب الكمية</span></div><button class="order-btn" data-service="PUBG UC">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=ff.garena.com" alt="Free Fire Diamonds" loading="lazy" referrerpolicy="no-referrer"></div><h4>Free Fire</h4><p>شحن جواهر فري فاير بسهولة.</p><div class="price"><span>السعر</span><span>حسب الكمية</span></div><button class="order-btn" data-service="Free Fire Diamonds">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=easports.com" alt="FC Mobile Points" loading="lazy" referrerpolicy="no-referrer"></div><h4>FC Mobile</h4><p>شحن نقاط FC Mobile حسب الطلب.</p><div class="price"><span>السعر</span><span>حسب الكمية</span></div><button class="order-btn" data-service="FC Mobile Points">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=roblox.com" alt="Roblox Robux" loading="lazy" referrerpolicy="no-referrer"></div><h4>Roblox Robux</h4><p>شحن روبوكس أو بطاقات روبلوكس.</p><div class="price"><span>السعر</span><span>حسب الكمية</span></div><button class="order-btn" data-service="Roblox Robux">اطلب عبر واتساب</button></div>
+          </div>
         </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=capcut.com" alt="CapCut Pro" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>CapCut Pro</h3>
-          <p>خدمة مناسبة للمونتاج وصناعة المحتوى.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="CapCut Pro">اطلب عبر واتساب</button>
+
+        <article class="service-bundle" data-category="tools">
+          <div class="bundle-head"><h3>الأدوات والبرمجيات</h3><span>4 خدمات</span></div>
+          <div class="bundle-items">
+            <div class="mini-service"><div class="icon-box"><span>🔐</span></div><h4>تفعيل برامج</h4><p>تفعيل برامج وأدوات حسب نوع الخدمة.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="تفعيل برامج">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><span>🧠</span></div><h4>اشتراكات AI</h4><p>أدوات ذكاء اصطناعي للكتابة والتصميم.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="اشتراكات AI">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><span>🛡️</span></div><h4>VPN</h4><p>خدمات VPN وتصفح آمن.</p><div class="price"><span>السعر</span><span>حسب الخدمة</span></div><button class="order-btn" data-service="VPN">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><span>☁️</span></div><h4>تخزين سحابي</h4><p>تخزين، إيميلات احترافية، وحلول أعمال.</p><div class="price"><span>السعر</span><span>حسب الطلب</span></div><button class="order-btn" data-service="تخزين سحابي وإيميلات">اطلب عبر واتساب</button></div>
+          </div>
         </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=snapchat.com" alt="Snapchat Plus" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Snapchat Plus</h3>
-          <p>تفعيل الاشتراك حسب المدة المطلوبة.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="Snapchat Plus">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=youtube.com" alt="YouTube Premium" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>YouTube Premium</h3>
-          <p>اشتراك مشاهدة بدون إعلانات حسب المتاح.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="YouTube Premium">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=spotify.com" alt="Spotify Premium" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Spotify Premium</h3>
-          <p>اشتراك موسيقى رقمي سريع وآمن.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="Spotify Premium">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=netflix.com" alt="Netflix" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Netflix</h3>
-          <p>اشتراك ترفيهي حسب الباقة المتاحة.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="Netflix">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=play.google.com" alt="Google Play Gift Card" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Google Play Gift Card</h3>
-          <p>بطاقات رقمية للتطبيقات والألعاب.</p>
-          <div class="price"><span>السعر</span><span>حسب الفئة</span></div>
-          <button class="order-btn" data-service="Google Play Gift Card">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=apple.com" alt="Apple Gift Card" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Apple Gift Card</h3>
-          <p>بطاقات آبل حسب الفئة المطلوبة.</p>
-          <div class="price"><span>السعر</span><span>حسب الفئة</span></div>
-          <button class="order-btn" data-service="Apple Gift Card">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="apps">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=telegram.org" alt="Telegram Premium" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Telegram Premium</h3>
-          <p>تفعيل اشتراك تيليجرام بريميوم.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="Telegram Premium">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" id="games" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=pubgmobile.com" alt="PUBG UC" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>PUBG UC</h3>
-          <p>شحن شدات ببجي بسرعة حسب الكمية.</p>
-          <div class="price"><span>السعر</span><span>حسب الكمية</span></div>
-          <button class="order-btn" data-service="PUBG UC">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=ff.garena.com" alt="Free Fire Diamonds" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Free Fire Diamonds</h3>
-          <p>شحن جواهر فري فاير بطريقة سهلة.</p>
-          <div class="price"><span>السعر</span><span>حسب الكمية</span></div>
-          <button class="order-btn" data-service="Free Fire Diamonds">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=easports.com" alt="FC Mobile Points" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>FC Mobile Points</h3>
-          <p>شحن نقاط FC Mobile حسب الطلب.</p>
-          <div class="price"><span>السعر</span><span>حسب الكمية</span></div>
-          <button class="order-btn" data-service="FC Mobile Points">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=konami.com" alt="eFootball Coins" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>eFootball Coins</h3>
-          <p>شحن عملات eFootball حسب المتوفر.</p>
-          <div class="price"><span>السعر</span><span>حسب الكمية</span></div>
-          <button class="order-btn" data-service="eFootball Coins">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=roblox.com" alt="Roblox Robux" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Roblox Robux</h3>
-          <p>شحن روبوكس أو بطاقات روبلوكس.</p>
-          <div class="price"><span>السعر</span><span>حسب الكمية</span></div>
-          <button class="order-btn" data-service="Roblox Robux">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=tiktok.com" alt="TikTok Coins" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>TikTok Coins</h3>
-          <p>شحن تيك توك كوينز بسرعة.</p>
-          <div class="price"><span>السعر</span><span>حسب الكمية</span></div>
-          <button class="order-btn" data-service="TikTok Coins">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=playstation.com" alt="PlayStation Gift Card" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>PlayStation Gift Card</h3>
-          <p>بطاقات بلايستيشن حسب المتجر والفئة.</p>
-          <div class="price"><span>السعر</span><span>حسب الفئة</span></div>
-          <button class="order-btn" data-service="PlayStation Gift Card">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="games">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=steampowered.com" alt="Steam Gift Card" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>Steam Gift Card</h3>
-          <p>بطاقات ستيم للألعاب والبرامج.</p>
-          <div class="price"><span>السعر</span><span>حسب الفئة</span></div>
-          <button class="order-btn" data-service="Steam Gift Card">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" id="tools" data-category="tools">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=microsoft.com" alt="تفعيل برامج" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>تفعيل برامج</h3>
-          <p>تفعيل برامج وأدوات حسب نوع الخدمة.</p>
-          <div class="price"><span>السعر يبدأ من</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="تفعيل برامج">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="tools">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=openai.com" alt="اشتراكات AI" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>اشتراكات AI</h3>
-          <p>حسابات وأدوات ذكاء اصطناعي للتصميم والكتابة.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="اشتراكات AI">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="tools">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=nordvpn.com" alt="برامج حماية و VPN" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>برامج حماية و VPN</h3>
-          <p>خدمات حماية، خصوصية، وتصفح آمن.</p>
-          <div class="price"><span>السعر</span><span>حسب الخدمة</span></div>
-          <button class="order-btn" data-service="برامج حماية و VPN">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="tools">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=google.com" alt="تخزين سحابي وإيميلات" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>تخزين سحابي وإيميلات</h3>
-          <p>خدمات تخزين، إيميلات احترافية، وحلول أعمال.</p>
-          <div class="price"><span>السعر</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="تخزين سحابي وإيميلات احترافية">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" id="stores" data-category="stores">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=shopify.com" alt="إنشاء متجر إلكتروني" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>إنشاء متجر إلكتروني</h3>
-          <p>متجر كامل حسب النشاط مع أقسام وبطاقات خدمات أو منتجات.</p>
-          <div class="price"><span>السعر</span><span>حسب الاتفاق</span></div>
-          <button class="order-btn" data-service="إنشاء متجر إلكتروني">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="stores">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=carrefour.com" alt="متجر مواد غذائية" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>متجر مواد غذائية</h3>
-          <p>واجهة محل أغذية مع فاتورة وطلب واتساب.</p>
-          <div class="price"><span>السعر</span><span>حسب الاتفاق</span></div>
-          <button class="order-btn" data-service="متجر مواد غذائية">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="stores">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=zara.com" alt="متجر ملابس" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>متجر ملابس</h3>
-          <p>متجر أنيق للمنتجات والمقاسات والطلبات.</p>
-          <div class="price"><span>السعر</span><span>حسب الاتفاق</span></div>
-          <button class="order-btn" data-service="متجر ملابس">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="stores">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=woocommerce.com" alt="متجر مع لوحة تحكم" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>متجر مع لوحة تحكم</h3>
-          <p>تسجيل دخول وإدارة خدمات أو منتجات وفواتير.</p>
-          <div class="price"><span>السعر</span><span>حسب الاتفاق</span></div>
-          <button class="order-btn" data-service="متجر مع لوحة تحكم">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" id="design" data-category="design">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=adobe.com" alt="تصميم شعارات" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>تصميم شعارات</h3>
-          <p>شعار بسيط وجميل لمتجرك أو مشروعك.</p>
-          <div class="price"><span>السعر يبدأ من</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="تصميم شعار">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" data-category="design">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=canva.com" alt="تصميم إعلانات" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>تصميم إعلانات</h3>
-          <p>إعلانات جذابة للواتساب، فيسبوك، وإنستغرام.</p>
-          <div class="price"><span>السعر يبدأ من</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="تصميم إعلان">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" id="invoices" data-category="design">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=zoho.com" alt="تصميم فواتير" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>تصميم فواتير</h3>
-          <p>فاتورة محل، فاتورة واتساب، أو صفحة طلب بسيطة.</p>
-          <div class="price"><span>السعر يبدأ من</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="تصميم فاتورة">اطلب عبر واتساب</button>
-        </article>
-        <article class="service-card" id="special" data-category="design">
-          <div class="icon-box"><img src="https://www.google.com/s2/favicons?sz=128&domain=figma.com" alt="صور منتجات وواجهات" loading="lazy" referrerpolicy="no-referrer"></div>
-          <h3>صور منتجات وواجهات</h3>
-          <p>تصميم صور منتجات وواجهات مواقع بشكل احترافي.</p>
-          <div class="price"><span>السعر يبدأ من</span><span>حسب الطلب</span></div>
-          <button class="order-btn" data-service="تصميم صور منتجات أو واجهات مواقع">اطلب عبر واتساب</button>
+
+        <article class="service-bundle" data-category="stores">
+          <div class="bundle-head"><h3>إنشاء المتاجر</h3><span>4 خدمات</span></div>
+          <div class="bundle-items">
+            <div class="mini-service"><div class="icon-box"><span>🛒</span></div><h4>متجر إلكتروني</h4><p>متجر كامل حسب النشاط.</p><div class="price"><span>السعر</span><span>حسب الاتفاق</span></div><button class="order-btn" data-service="إنشاء متجر إلكتروني">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><span>🥫</span></div><h4>متجر مواد غذائية</h4><p>متجر أغذية مع فاتورة وواتساب.</p><div class="price"><span>السعر</span><span>حسب الاتفاق</span></div><button class="order-btn" data-service="متجر مواد غذائية">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><span>👕</span></div><h4>متجر ملابس</h4><p>متجر للملابس والمقاسات.</p><div class="price"><span>السعر</span><span>حسب الاتفاق</span></div><button class="order-btn" data-service="متجر ملابس">اطلب عبر واتساب</button></div>
+            <div class="mini-service"><div class="icon-box"><span>⚙️</span></div><h4>لوحة تحكم</h4><p>إدارة منتجات، طلبات، وفواتير.</p><div class="price"><span>السعر</span><span>حسب الاتفاق</span></div><button class="order-btn" data-service="متجر مع لوحة تحكم">اطلب عبر واتساب</button></div>
+          </div>
         </article>
       </div>
     </div>
@@ -1011,7 +912,7 @@
   <script>
     // غيّر هذا الرقم إلى رقمك بصيغة دولية بدون + أو مسافات.
     // مثال موريتانيا: 222XXXXXXXX
-    const WHATSAPP_NUMBER = "22200000000";
+    const WHATSAPP_NUMBER = "22237929637";
 
     function openWhatsApp(serviceName = "") {
       const message = serviceName
@@ -1035,7 +936,7 @@
     });
 
     const tabButtons = document.querySelectorAll(".tab-btn");
-    const serviceCards = document.querySelectorAll(".service-card");
+    const serviceCards = document.querySelectorAll(".service-bundle");
 
     tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -1045,7 +946,7 @@
         const filter = button.dataset.filter;
         serviceCards.forEach((card) => {
           const show = filter === "all" || card.dataset.category === filter;
-          card.style.display = show ? "flex" : "none";
+          card.style.display = show ? "block" : "none";
         });
       });
     });
